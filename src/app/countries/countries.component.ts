@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./countries.component.css']
 })
 export class CountriesComponent implements OnInit {
-
   /*
     We are using Input, Output & EventEmitters to communicate amoung components
   */
