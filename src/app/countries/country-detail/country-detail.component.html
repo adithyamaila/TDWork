@@ -1,0 +1,54 @@
+<div style="height: 450px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="" alt="" class="img-responsive">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Country Details</h2>
+        </div>
+    </div>
+    <hr>
+    <div *ngIf="country">
+        <div class="country-details">
+            <div>
+                <label>Country common name:</label> {{country.name}}
+            </div>
+
+            <div>
+                <label>Country native name:</label> {{country.demonym}}
+            </div>
+
+            <div>
+                <label>Continent:</label> {{country.region}}
+            </div>
+
+            <div>
+                <label>Capital city:</label> {{country.capital}}
+            </div>
+
+            <div>
+                <label>Sub region:</label> {{country.subregion}}
+            </div>
+            <div *ngFor="let language of country.languages">
+                <div>
+                    <label>Language(s):</label> {{language.name}}
+                </div>
+            </div>
+            <div>
+                <label>Area:</label> {{country.area}} km
+                <sup><small >2</small></sup>
+            </div>
+            <div>
+                <label>Population Count:</label> {{country.population}}
+            </div>
+            <div>
+                <label>Currencies :</label> {{country.currencies[0].code}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!country">
+        <label>Select one particular country on the left!</label>
+    </div>
+</div>

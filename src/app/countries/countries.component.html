@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-country-list (countrySelected)="currentCountry($event)" [countries]="countries"></app-country-list>
+    </div>
+    <div class="col-md-7" style="background: burlywood">
+        <app-country-detail [country]="currentCountryValue"></app-country-detail>
+    </div>
+</div>
