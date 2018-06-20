@@ -1,4 +1,4 @@
-<div style="height: 450px;">
+<div class="detailsMeasurement">
     <div class="row">
         <div class="col-xs-12">
             <img src="" alt="" class="img-responsive">
@@ -31,10 +31,12 @@
             <div>
                 <label>Sub region:</label> {{country.subregion}}
             </div>
-            <div *ngFor="let language of country.languages">
-                <div>
-                    <label>Language(s):</label> {{language.name}}
-                </div>
+
+            <div>
+                <label>Language(s):</label>
+                <span *ngFor="let language of country.languages">
+                    {{language.name}}
+                </span>
             </div>
             <div>
                 <label>Area:</label> {{country.area}} km
@@ -44,7 +46,16 @@
                 <label>Population Count:</label> {{country.population}}
             </div>
             <div>
-                <label>Currencies :</label> {{country.currencies[0].code}}
+                <label>Currencies :</label>
+                <span *ngFor="let curreny of country.currencies">
+                  {{curreny.code}}
+                </span>
+            </div>
+            <div>
+                <label>Borders :</label>
+                <span *ngFor="let border of country.borders">
+                {{border}}
+              </span>
             </div>
         </div>
     </div>

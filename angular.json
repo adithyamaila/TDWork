@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "shoppingApp": {
+        "countriesApp": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/shoppingApp",
+                        "outputPath": "dist/countriesApp",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -23,7 +23,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "../shoppingApp/node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "../countriesApp/node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/styles.css"
                         ],
                         "scripts": []
@@ -49,18 +49,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "shoppingApp:build"
+                        "browserTarget": "countriesApp:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "shoppingApp:build:production"
+                            "browserTarget": "countriesApp:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "shoppingApp:build"
+                        "browserTarget": "countriesApp:build"
                     }
                 },
                 "test": {
@@ -94,7 +94,7 @@
                 }
             }
         },
-        "shoppingApp-e2e": {
+        "countriesApp-e2e": {
             "root": "e2e/",
             "projectType": "application",
             "architect": {
@@ -102,7 +102,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "shoppingApp:serve"
+                        "devServerTarget": "countriesApp:serve"
                     }
                 },
                 "lint": {
@@ -117,5 +117,5 @@
             }
         }
     },
-    "defaultProject": "shoppingApp"
+    "defaultProject": "countriesApp"
 }

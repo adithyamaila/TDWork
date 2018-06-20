@@ -1,0 +1,14 @@
+.flagMeasurements {
+    display: inline-block;
+    width: 50px;
+    float: right;
+}
+
+.listMeasurements {
+    height: 450px;
+    overflow: auto
+}
+
+.inlineBox {
+    display: inline-block;
+}
